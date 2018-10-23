@@ -25,7 +25,7 @@
     </item>
     
     <item>
-      <title>孙源iOS面试总结</title>
+      <title>观 sunnyxx iOS 面试视频总结</title>
       <link>http://lorwy.github.io/post/note/sunnyxx_ios_note/</link>
       <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
       
@@ -33,34 +33,39 @@
       
         <description>
 
-&lt;h1 id=&#34;review&#34;&gt;Review&lt;/h1&gt;
+&lt;h1 id=&#34;review-简历&#34;&gt;Review 简历&lt;/h1&gt;
 
-&lt;h5 id=&#34;主要对这几块进行总结-要结合技术tips总结出来&#34;&gt;主要对这几块进行总结，要结合技术Tips总结出来&lt;/h5&gt;
+&lt;h4 id=&#34;关于项目总结&#34;&gt;关于项目总结&lt;/h4&gt;
 
-&lt;p&gt;项目描述
-项目规模
-其中职责
-技术栈
-遇到的挑战及如何解决的&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;主要对这几块进行总结，要结合技术Tips总结出来&lt;/strong&gt;
+- 项目描述
+- 项目规模
+- 其中职责
+- 涉及的技术栈
+- 遇到的挑战及如何解决的&lt;/p&gt;
 
-&lt;h5 id=&#34;专业技能&#34;&gt;专业技能：&lt;/h5&gt;
+&lt;h4 id=&#34;专业技能&#34;&gt;专业技能：&lt;/h4&gt;
 
-&lt;p&gt;例举技术名词时写出用起做了什么，如：
+&lt;p&gt;例举技术名词时写出用其做了什么，如：
 熟练应用objc runtime技术，曾使用它做了ViewController进入和退出时的&lt;strong&gt;AOP埋点&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h5 id=&#34;更多信息来体现特别&#34;&gt;更多信息来体现特别&lt;/h5&gt;
+&lt;h4 id=&#34;更多信息来体现特别&#34;&gt;更多信息来体现特别&lt;/h4&gt;
 
-&lt;p&gt;Blog
-GitHub
-技术探索
-对技术的个人理解
-做过的有意思的事儿&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Blog&lt;/li&gt;
+&lt;li&gt;GitHub&lt;/li&gt;
+&lt;li&gt;技术探索&lt;/li&gt;
+&lt;li&gt;对技术的个人理解&lt;/li&gt;
+&lt;li&gt;做过的有意思的事儿（与技术相关的）&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h1 id=&#34;理解应用架构&#34;&gt;理解应用架构&lt;/h1&gt;
+&lt;h4 id=&#34;理解基本的应用架构&#34;&gt;理解基本的应用架构&lt;/h4&gt;
 
 &lt;p&gt;MVC和MVVM理解是否正确&lt;/p&gt;
 
-&lt;h1 id=&#34;sr-内容管理&#34;&gt;[SR]内容管理&lt;/h1&gt;
+&lt;h2 id=&#34;几个面试题举例&#34;&gt;几个面试题举例&lt;/h2&gt;
+
+&lt;h3 id=&#34;sr-内容管理&#34;&gt;[SR]内容管理&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Stack 和 Heap 分别的使用，如何管理？&lt;/li&gt;
@@ -69,11 +74,13 @@ GitHub
 &lt;li&gt;AutoreleasePoll是如何实现的？&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&#34;sr-理解-class-与对象模型&#34;&gt;[SR] 理解 Class 与对象模型&lt;/h1&gt;
+&lt;h3 id=&#34;sr-理解-class-与对象模型&#34;&gt;[SR] 理解 Class 与对象模型&lt;/h3&gt;
 
-&lt;h1 id=&#34;sr-理解runloop&#34;&gt;[SR] 理解Runloop&lt;/h1&gt;
+&lt;h3 id=&#34;sr-理解-runloop&#34;&gt;[SR] 理解 Runloop&lt;/h3&gt;
 
-&lt;h1 id=&#34;sr-深入理解消息机制&#34;&gt;[SR] 深入理解消息机制&lt;/h1&gt;
+&lt;h3 id=&#34;关于block的调用&#34;&gt;关于block的调用&lt;/h3&gt;
+
+&lt;h3 id=&#34;sr-深入理解消息机制&#34;&gt;[SR] 深入理解消息机制&lt;/h3&gt;
 
 &lt;p&gt;从写下[obj foo] 这行代码直到运行时 foo 被调用，中间都发生了什么？
 &lt;strong&gt;掌握&lt;/strong&gt;：objc_msgSend 的关键调用，后续如何通过 selector 从 isa 找到 IMP，若运行时没找到 foo 会如何？&lt;/p&gt;
