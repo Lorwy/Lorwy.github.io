@@ -61,12 +61,15 @@
 
 &lt;h1 id=&#34;viper架构简介&#34;&gt;VIPER架构简介&lt;/h1&gt;
 
-&lt;p&gt;VIPER架构由5部分组成：
-- View
-- Interactor
-- Presenter
-- Entity
-- Router&lt;/p&gt;
+&lt;p&gt;VIPER架构由5部分组成：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;View&lt;/li&gt;
+&lt;li&gt;Interactor&lt;/li&gt;
+&lt;li&gt;Presenter&lt;/li&gt;
+&lt;li&gt;Entity&lt;/li&gt;
+&lt;li&gt;Router&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;示意图：
 &lt;img src=&#34;https://lorwy.github.io/image/VIPER.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
