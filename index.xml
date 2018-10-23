@@ -62,11 +62,11 @@
 &lt;h1 id=&#34;viper架构简介&#34;&gt;VIPER架构简介&lt;/h1&gt;
 
 &lt;p&gt;VIPER架构由5部分组成：
-1. View
-2. Interactor
-3. Presenter
-4. Entity
-5. Router&lt;/p&gt;
+- View
+- Interactor
+- Presenter
+- Entity
+- Router&lt;/p&gt;
 
 &lt;p&gt;示意图：
 &lt;img src=&#34;baseURL/image/VIPER.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
