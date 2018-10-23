@@ -37,21 +37,30 @@
 
 &lt;h1 id=&#34;mvc架构的优缺点&#34;&gt;MVC架构的优缺点&lt;/h1&gt;
 
-&lt;p&gt;优点有2：
-- 代码总量少
-- 简单易懂&lt;/p&gt;
+&lt;p&gt;优点有2：&lt;/p&gt;
 
-&lt;p&gt;缺点：（造成的原因主要因为&lt;strong&gt;视图层和控制器层高度耦合&lt;/strong&gt;）
-- 代码过于集中（ViewController功能太过沉重）
-   - 交互
-   - 视图更新
-   - 布局
-   - Model数据获取及修改
-   - 导航路由
-- 难以进行测试
-- 难以扩展（*ViewController太过笨重*）
-- Model层过于简单
-- 网络层无从安放&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码总量少&lt;/li&gt;
+&lt;li&gt;简单易懂&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;缺点：（造成的原因主要因为&lt;strong&gt;视图层和控制器层高度耦合&lt;/strong&gt;）&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;代码过于集中（ViewController功能太过沉重）
+
+&lt;ul&gt;
+&lt;li&gt;交互&lt;/li&gt;
+&lt;li&gt;视图更新&lt;/li&gt;
+&lt;li&gt;布局&lt;/li&gt;
+&lt;li&gt;Model数据获取及修改&lt;/li&gt;
+&lt;li&gt;导航路由&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;难以进行测试&lt;/li&gt;
+&lt;li&gt;难以扩展（*ViewController太过笨重*）&lt;/li&gt;
+&lt;li&gt;Model层过于简单&lt;/li&gt;
+&lt;li&gt;网络层无从安放&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;总结&lt;/strong&gt;: 过于笼统的代码分配，导致除了数据或者视图外的类、结构、方法等都将被放到ViewController中，造成ViewController过于臃肿，与view和无法解耦合&lt;/p&gt;
 
@@ -71,8 +80,9 @@
 &lt;li&gt;Router&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;示意图：
-&lt;img src=&#34;https://lorwy.github.io/image/VIPER.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;示意图：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://lorwy.github.io/image/VIPER.jpeg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;h4 id=&#34;各模块说明&#34;&gt;各模块说明&lt;/h4&gt;
 
@@ -96,18 +106,24 @@
 
 &lt;h5 id=&#34;数据管理层-interactor&#34;&gt;数据管理层（Interactor）&lt;/h5&gt;
 
-&lt;p&gt;负责处理数据源信息
-- 网络请求
-- 数据传输
-- 缓存、存储
-- 生成实例等
-- 一些从中间层和模型层的一些逻辑差不多被剥离至此&lt;/p&gt;
+&lt;p&gt;负责处理数据源信息&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;网络请求&lt;/li&gt;
+&lt;li&gt;数据传输&lt;/li&gt;
+&lt;li&gt;缓存、存储&lt;/li&gt;
+&lt;li&gt;生成实例等&lt;/li&gt;
+&lt;li&gt;一些从中间层和模型层的一些逻辑差不多被剥离至此&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h5 id=&#34;模型层-entity&#34;&gt;模型层（Entity）&lt;/h5&gt;
 
-&lt;p&gt;很简单，只有下面两个东西
-- 初始化方法
-- 属性相关的get/set方法&lt;/p&gt;
+&lt;p&gt;很简单，只有下面两个东西&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;初始化方法&lt;/li&gt;
+&lt;li&gt;属性相关的get/set方法&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>
