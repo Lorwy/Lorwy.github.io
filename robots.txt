@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: htt://lorwy.github.io/sitemap.xml

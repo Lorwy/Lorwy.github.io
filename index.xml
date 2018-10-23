@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lorwy&#39;s blog</title>
+    <link>htt://lorwy.github.io/</link>
+    <description>Recent content on Lorwy&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>lorwy</copyright>
+    <lastBuildDate>Mon, 22 Oct 2018 21:38:52 +0800</lastBuildDate>
+    
+        <atom:link href="htt://lorwy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>About</title>
+      <link>htt://lorwy.github.io/about/</link>
+      <pubDate>Mon, 22 Oct 2018 21:38:52 +0800</pubDate>
+      
+      <guid>htt://lorwy.github.io/about/</guid>
+      
+        <description>&lt;p&gt;这是一个学习、分享的地方！&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>孙源iOS面试总结</title>
+      <link>htt://lorwy.github.io/post/note/sunnyxx_ios_note/</link>
+      <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>htt://lorwy.github.io/post/note/sunnyxx_ios_note/</guid>
+      
+        <description>
+
+&lt;h1 id=&#34;review&#34;&gt;Review&lt;/h1&gt;
+
+&lt;h5 id=&#34;主要对这几块进行总结-要结合技术tips总结出来&#34;&gt;主要对这几块进行总结，要结合技术Tips总结出来&lt;/h5&gt;
+
+&lt;p&gt;项目描述
+项目规模
+其中职责
+技术栈
+遇到的挑战及如何解决的&lt;/p&gt;
+
+&lt;h5 id=&#34;专业技能&#34;&gt;专业技能：&lt;/h5&gt;
+
+&lt;p&gt;例举技术名词时写出用起做了什么，如：
+熟练应用objc runtime技术，曾使用它做了ViewController进入和退出时的&lt;strong&gt;AOP埋点&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h5 id=&#34;更多信息来体现特别&#34;&gt;更多信息来体现特别&lt;/h5&gt;
+
+&lt;p&gt;Blog
+GitHub
+技术探索
+对技术的个人理解
+做过的有意思的事儿&lt;/p&gt;
+
+&lt;h1 id=&#34;理解应用架构&#34;&gt;理解应用架构&lt;/h1&gt;
+
+&lt;p&gt;MVC和MVVM理解是否正确&lt;/p&gt;
+
+&lt;h1 id=&#34;sr-内容管理&#34;&gt;[SR]内容管理&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Stack 和 Heap 分别的使用，如何管理？&lt;/li&gt;
+&lt;li&gt;ARC 是如何实现的？&lt;/li&gt;
+&lt;li&gt;Autorelease 对象何时释放？&lt;/li&gt;
+&lt;li&gt;AutoreleasePoll是如何实现的？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&#34;sr-理解-class-与对象模型&#34;&gt;[SR] 理解 Class 与对象模型&lt;/h1&gt;
+
+&lt;h1 id=&#34;sr-理解runloop&#34;&gt;[SR] 理解Runloop&lt;/h1&gt;
+
+&lt;h1 id=&#34;sr-深入理解消息机制&#34;&gt;[SR] 深入理解消息机制&lt;/h1&gt;
+
+&lt;p&gt;从写下[obj foo] 这行代码直到运行时 foo 被调用，中间都发生了什么？
+&lt;strong&gt;掌握&lt;/strong&gt;：objc_msgSend 的关键调用，后续如何通过 selector 从 isa 找到 IMP，若运行时没找到 foo 会如何？&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;精通&lt;/strong&gt;：编译器如何编译成 objc_msgSend、消息 cache 机制、消息转发机制、objc_msgSend 的各个版本、objc_msgSend的实现、跳板机制等&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>
