@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lorwy&#39;s blog</title>
-    <link>htt://lorwy.github.io/</link>
+    <link>http://lorwy.github.io/</link>
     <description>Recent content on Lorwy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>lorwy</copyright>
     <lastBuildDate>Mon, 22 Oct 2018 21:38:52 +0800</lastBuildDate>
     
-        <atom:link href="htt://lorwy.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://lorwy.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>htt://lorwy.github.io/about/</link>
+      <link>http://lorwy.github.io/about/</link>
       <pubDate>Mon, 22 Oct 2018 21:38:52 +0800</pubDate>
       
-      <guid>htt://lorwy.github.io/about/</guid>
+      <guid>http://lorwy.github.io/about/</guid>
       
         <description>&lt;p&gt;这是一个学习、分享的地方！&lt;/p&gt;
 </description>
@@ -26,10 +26,10 @@
     
     <item>
       <title>孙源iOS面试总结</title>
-      <link>htt://lorwy.github.io/post/note/sunnyxx_ios_note/</link>
+      <link>http://lorwy.github.io/post/note/sunnyxx_ios_note/</link>
       <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>htt://lorwy.github.io/post/note/sunnyxx_ios_note/</guid>
+      <guid>http://lorwy.github.io/post/note/sunnyxx_ios_note/</guid>
       
         <description>
 

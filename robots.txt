@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: htt://lorwy.github.io/sitemap.xml
+Sitemap: http://lorwy.github.io/sitemap.xml

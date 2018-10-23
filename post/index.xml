@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Lorwy&#39;s blog</title>
-    <link>htt://lorwy.github.io/post/</link>
+    <link>http://lorwy.github.io/post/</link>
     <description>Recent content in Posts on Lorwy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>lorwy</copyright>
     <lastBuildDate>Mon, 22 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="htt://lorwy.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://lorwy.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>孙源iOS面试总结</title>
-      <link>htt://lorwy.github.io/post/note/sunnyxx_ios_note/</link>
+      <link>http://lorwy.github.io/post/note/sunnyxx_ios_note/</link>
       <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>htt://lorwy.github.io/post/note/sunnyxx_ios_note/</guid>
+      <guid>http://lorwy.github.io/post/note/sunnyxx_ios_note/</guid>
       <description>Review 主要对这几块进行总结，要结合技术Tips总结出来 项目描述 项目规模 其中职责 技术栈 遇到的挑战及如何解决的 专业技能： 例举技术名词时写出用起做了什</description>
     </item>
     

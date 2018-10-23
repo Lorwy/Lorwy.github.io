@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Lorwy&#39;s blog</title>
-    <link>htt://lorwy.github.io/categories/</link>
+    <link>http://lorwy.github.io/categories/</link>
     <description>Recent content in Categories on Lorwy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>lorwy</copyright>
     
-	<atom:link href="htt://lorwy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://lorwy.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>面试</title>
-      <link>htt://lorwy.github.io/categories/%E9%9D%A2%E8%AF%95/</link>
+      <link>http://lorwy.github.io/categories/%E9%9D%A2%E8%AF%95/</link>
       <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>htt://lorwy.github.io/categories/%E9%9D%A2%E8%AF%95/</guid>
+      <guid>http://lorwy.github.io/categories/%E9%9D%A2%E8%AF%95/</guid>
       <description></description>
     </item>
     
