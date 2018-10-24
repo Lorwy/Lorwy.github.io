@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ios on Lorwy&#39;s blog</title>
-    <link>http://lorwy.github.io/tags/ios/</link>
+    <link>https://lorwy.github.io/tags/ios/</link>
     <description>Recent content in Ios on Lorwy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
     <lastBuildDate>Tue, 23 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://lorwy.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lorwy.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>iOS面试之道_架构篇_Note</title>
-      <link>http://lorwy.github.io/post/note/ios%E9%9D%A2%E8%AF%95%E4%B9%8B%E9%81%93_%E6%9E%B6%E6%9E%84%E7%AF%87_note/</link>
+      <link>https://lorwy.github.io/post/note/ios%E9%9D%A2%E8%AF%95%E4%B9%8B%E9%81%93_%E6%9E%B6%E6%9E%84%E7%AF%87_note/</link>
       <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lorwy.github.io/post/note/ios%E9%9D%A2%E8%AF%95%E4%B9%8B%E9%81%93_%E6%9E%B6%E6%9E%84%E7%AF%87_note/</guid>
+      <guid>https://lorwy.github.io/post/note/ios%E9%9D%A2%E8%AF%95%E4%B9%8B%E9%81%93_%E6%9E%B6%E6%9E%84%E7%AF%87_note/</guid>
       <description> 每个类、结构体、方法、变量的存在都应该遵循单一职责原则。
 MVC架构的优缺点 优点有2：
  代码总量少 简单易懂  缺点：（造成的原因主要因为视图层和控制器层高度耦合）
@@ -35,10 +35,10 @@ VIPER架构简介 VIPER架构由5部分组成：
     
     <item>
       <title>观 sunnyxx iOS 面试视频总结</title>
-      <link>http://lorwy.github.io/post/note/sunnyxx_ios_note/</link>
+      <link>https://lorwy.github.io/post/note/sunnyxx_ios_note/</link>
       <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lorwy.github.io/post/note/sunnyxx_ios_note/</guid>
+      <guid>https://lorwy.github.io/post/note/sunnyxx_ios_note/</guid>
       <description>Review 简历 关于项目总结 主要对这几块进行总结，要结合技术Tips总结出来 - 项目描述 - 项目规模 - 其中职责 - 涉及的技术栈 - 遇到的挑战及如何解决的
 专业技能： 例举技术名词时写出用其做了什么，如： 熟练应用objc runtime技术，曾使用它做了ViewController进入和退出时的AOP埋点
 更多信息来体现特别  Blog GitHub 技术探索 对技术的个人理解 做过的有意思的事儿（与技术相关的）  理解基本的应用架构 MVC和MVVM理解是否正确

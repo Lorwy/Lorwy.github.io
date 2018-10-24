@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Lorwy&#39;s blog</title>
-    <link>http://lorwy.github.io/tags/</link>
+    <link>https://lorwy.github.io/tags/</link>
     <description>Recent content in Tags on Lorwy&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017. All rights reserved.</copyright>
     <lastBuildDate>Tue, 23 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://lorwy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://lorwy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Interview</title>
-      <link>http://lorwy.github.io/tags/interview/</link>
+      <link>https://lorwy.github.io/tags/interview/</link>
       <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lorwy.github.io/tags/interview/</guid>
+      <guid>https://lorwy.github.io/tags/interview/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ios</title>
-      <link>http://lorwy.github.io/tags/ios/</link>
+      <link>https://lorwy.github.io/tags/ios/</link>
       <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lorwy.github.io/tags/ios/</guid>
+      <guid>https://lorwy.github.io/tags/ios/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Machine Learning</title>
-      <link>http://lorwy.github.io/tags/machine-learning/</link>
+      <link>https://lorwy.github.io/tags/machine-learning/</link>
       <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://lorwy.github.io/tags/machine-learning/</guid>
+      <guid>https://lorwy.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
     
