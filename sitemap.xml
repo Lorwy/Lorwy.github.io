@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>http://lorwy.github.io/post/note/logistic_regression_with_gradient_descent/</loc>
+    <lastmod>2018-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>http://lorwy.github.io/post/note/ios%E9%9D%A2%E8%AF%95%E4%B9%8B%E9%81%93_%E6%9E%B6%E6%9E%84%E7%AF%87_note/</loc>
     <lastmod>2018-10-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -30,14 +37,14 @@
   </url>
   
   <url>
-    <loc>http://lorwy.github.io/categories/interview/</loc>
+    <loc>http://lorwy.github.io/tags/interview/</loc>
     <lastmod>2018-10-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://lorwy.github.io/tags/interview/</loc>
+    <loc>http://lorwy.github.io/categories/interview/</loc>
     <lastmod>2018-10-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
@@ -58,8 +65,22 @@
   </url>
   
   <url>
+    <loc>http://lorwy.github.io/tags/machine-learning/</loc>
+    <lastmod>2018-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://lorwy.github.io/categories/ml/</loc>
+    <lastmod>2018-10-24T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://lorwy.github.io/post/</loc>
-    <lastmod>2018-10-23T00:00:00+00:00</lastmod>
+    <lastmod>2018-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>

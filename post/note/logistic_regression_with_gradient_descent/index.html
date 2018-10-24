@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>运用梯度下降优化逻辑回归模型 - Lorwy&#39;s blog</title>
+  
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="Lorwy" />
+  <meta name="description" content="逻辑回归简介 逻辑回归并不属于回归算法，而是经典的二分类算法，也可以处理多分类问题。 机器学习算法选择：先逻辑回归再用复杂的，能简单就用简单的 拿" />
+
+  <meta name="keywords" content="iOS, ML, Swift, Machine Learning, Objective-C" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.49.2" />
+
+
+<link rel="canonical" href="http://lorwy.github.io/post/note/logistic_regression_with_gradient_descent/" />
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="运用梯度下降优化逻辑回归模型" />
+<meta property="og:description" content="逻辑回归简介 逻辑回归并不属于回归算法，而是经典的二分类算法，也可以处理多分类问题。 机器学习算法选择：先逻辑回归再用复杂的，能简单就用简单的 拿" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://lorwy.github.io/post/note/logistic_regression_with_gradient_descent/" /><meta property="article:published_time" content="2018-10-24T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-10-24T00:00:00&#43;00:00"/>
+
+<meta itemprop="name" content="运用梯度下降优化逻辑回归模型">
+<meta itemprop="description" content="逻辑回归简介 逻辑回归并不属于回归算法，而是经典的二分类算法，也可以处理多分类问题。 机器学习算法选择：先逻辑回归再用复杂的，能简单就用简单的 拿">
+
+
+<meta itemprop="datePublished" content="2018-10-24T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-10-24T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1148">
+
+
+
+<meta itemprop="keywords" content="Machine Learning," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="运用梯度下降优化逻辑回归模型"/>
+<meta name="twitter:description" content="逻辑回归简介 逻辑回归并不属于回归算法，而是经典的二分类算法，也可以处理多分类问题。 机器学习算法选择：先逻辑回归再用复杂的，能简单就用简单的 拿"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Lorwy</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://lorwy.github.io/">Home</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://lorwy.github.io/post/">Archives</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://lorwy.github.io/tags/">Tags</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://lorwy.github.io/categories/">Categories</a>
+          
+        
+      </li><li class="mobile-menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://lorwy.github.io/about/">About</a>
+          
+        
+      </li>
+    
+  </ul>
+</nav>
+
+
+  
+    
+
+
+
+
+
+
+  <link rel="stylesheet" href="/lib/photoswipe/photoswipe.min.css" />
+  <link rel="stylesheet" href="/lib/photoswipe/default-skin/default-skin.min.css" />
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+  
+
+  
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">
+    
+      Lorwy
+    
+  </a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://lorwy.github.io/">Home</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://lorwy.github.io/post/">Archives</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://lorwy.github.io/tags/">Tags</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://lorwy.github.io/categories/">Categories</a>
+          
+
+        
+
+      </li>
+    
+      <li class="menu-item">
+        
+          
+          
+            <a class="menu-item-link" href="http://lorwy.github.io/about/">About</a>
+          
+
+        
+
+      </li>
+    
+    
+  </ul>
+</nav>
+
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">运用梯度下降优化逻辑回归模型</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-10-24 </span>
+        <div class="post-category">
+            <a href="http://lorwy.github.io/categories/ml/"> ML </a>
+            
+          </div>
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#逻辑回归简介">逻辑回归简介</a></li>
+<li><a href="#具体算法">具体算法</a>
+<ul>
+<li><a href="#sigmoid函数">sigmoid函数</a></li>
+<li><a href="#h-x">h(x)</a></li>
+<li><a href="#从数据中提取出特征-x-和标签-y">从数据中提取出特征 <code>X</code> 和标签 <code>y</code></a></li>
+<li><a href="#实现损失函数-cost-function">实现损失函数 <code>cost function</code></a></li>
+<li><a href="#实现偏导数-gradient-计算梯度">实现偏导数 <code>gradient()</code>计算梯度</a></li>
+<li><a href="#实现descent方法-并进行gradient-descent">实现descent方法，并进行Gradient descent</a>
+<ul>
+<li><a href="#gradient-descent函数">Gradient descent函数</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#测试方法">测试方法</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h1 id="逻辑回归简介">逻辑回归简介</h1>
+
+<hr />
+
+<p>逻辑回归并不属于回归算法，而是经典的二分类算法，也可以处理多分类问题。</p>
+
+<p>机器学习算法选择：先逻辑回归再用复杂的，能简单就用简单的</p>
+
+<p>拿到一个分类问题，首选逻辑回归试试，看看效果如何，再用复杂的分类算法试试，看看是否有逻辑回归效果更好</p>
+
+<p>注：<strong>逻辑回归的决策边界：可以使非线性的</strong></p>
+
+<h1 id="具体算法">具体算法</h1>
+
+<p>目标：建立分类器来求出 $\theta$</p>
+
+<p>算法步骤：
+- 实现 <code>sigmoid(z)</code> 函数
+- 实现 <code>h(x)</code> 函数
+- 从数据中提取出特征 <code>X</code> 和标签 <code>y</code>
+- 实现 <code>cost function</code>
+- 实现偏导数 <code>gradient()</code>
+- 进行参数更新 <code>descent</code>
+- 最后就求出了 $\theta$</p>
+
+<h2 id="sigmoid函数">sigmoid函数</h2>
+
+<p>$$g(z) = \frac{1}{1+e^{-z}}$$</p>
+
+<p><img src="https://lorwy.github.io/image/sigmoid.png" alt="" /></p>
+
+<p>函数定义:</p>
+
+<pre><code class="language-python">def sigmoid(z):
+    return 1 / (1 + np.exp(-z))
+</code></pre>
+
+<h2 id="h-x">h(x)</h2>
+
+<p>$$h(x) = \theta^T X$$</p>
+
+<pre><code class="language-python">def hx(X, theta):
+    return sigmoid(np.dot(X, theta.T))
+</code></pre>
+
+<p>如：
+$$
+\begin{array}{ccc}
+\begin{pmatrix}\theta<em>{0} &amp; \theta</em>{1} &amp; \theta<em>{2}\end{pmatrix} &amp; \times &amp; \begin{pmatrix}1<br />
+x</em>{1}<br />
+x<em>{2}
+\end{pmatrix}\end{array}=\theta</em>{0}+\theta<em>{1}x</em>{1}+\theta<em>{2}x</em>{2}
+$$</p>
+
+<h2 id="从数据中提取出特征-x-和标签-y">从数据中提取出特征 <code>X</code> 和标签 <code>y</code></h2>
+
+<p>提取出 <code>X</code> 和 <code>y</code> 并根据 <code>X</code> 的shape来初始化 <code>theta</code></p>
+
+<h2 id="实现损失函数-cost-function">实现损失函数 <code>cost function</code></h2>
+
+<p>将对数似然函数去负号</p>
+
+<p>$$
+D(h<em>\theta(x), y) = -y\log(h</em>\theta(x)) - (1-y)\log(1-h<em>\theta(x))
+$$
+求平均损失
+$$
+J(\theta)=\frac{1}{m}\sum</em>{i=1}^{m} D(h_\theta(x_i), y_i)
+$$</p>
+
+<pre><code class="language-python">def cost(X, y, theta):
+    left = np.multiply(-y, np.log(hx(X, theta)))
+    right = np.multiply(1, -y, np.log(1 - hx(X, theta)))
+    return np.sum(left - right) / (len(X))
+</code></pre>
+
+<h2 id="实现偏导数-gradient-计算梯度">实现偏导数 <code>gradient()</code>计算梯度</h2>
+
+<p>$$
+\frac{\partial J}{\partial \theta<em>j}=-\frac{1}{m}\sum</em>{i=1}^n (y<em>i - h</em>\theta (x<em>i))x</em>{ij}
+$$</p>
+
+<pre><code class="language-python">def gradient(X, y, theta):
+    grad = np.zeros(theta.shape)
+    error = (hx(X, theta) - y).ravel()
+    #print(theta.ravel())
+    for j in range(len(theta.ravel())):
+        term = np.multiply(error, X[:,j])
+        grad[0,j] = np.sum(term) / len(X)
+        
+    return grad
+</code></pre>
+
+<h2 id="实现descent方法-并进行gradient-descent">实现descent方法，并进行Gradient descent</h2>
+
+<p>3种不同的梯度下降方法</p>
+
+<ul>
+<li>批量梯度下降（Gradient descent）</li>
+<li>随机梯度下降（stochastic Gradient descent）</li>
+<li>小批量梯度下降（mini-bath Gradient descent）</li>
+</ul>
+
+<p>3种不同的停止策略</p>
+
+<ul>
+<li>循环次数达到阈值时</li>
+<li>代价函数低于阈值时</li>
+<li>梯度下降小于阈值时（$\varDelta \theta_j$）</li>
+</ul>
+
+<pre><code class="language-python">STOP_ITER = 0
+STOP_COST = 1
+STOP_GRAD = 2
+
+# type：停止策略 value：当前值 threshold：阈值
+def stopCriterion(type, value, threshold):
+    if type == STOP_ITER:
+        return value &gt; threshold
+    elif type == STOP_COST:
+        return abs(value[-1] - value[-2]) &lt; threshold
+    elif type == STOP_GRAD:
+        return np.linalg.norm(value) &lt; threshold
+    else:
+        return YES
+</code></pre>
+
+<p><strong>打乱数据</strong></p>
+
+<pre><code class="language-python">import numpy.random
+def shuffleData(data):
+    np.random.shuffle(data)
+    cols = data.shape[1]
+    X = data[:,0:cols-1]
+    y = data[:,cols-1:]
+    return X, y
+</code></pre>
+
+<h3 id="gradient-descent函数">Gradient descent函数</h3>
+
+<pre><code class="language-python">import time
+# data：带标签的training data
+# theta: 跟特征一样维度的初始化的theta行向量
+# batchSize：每次更新theta时用的数据个数，用来选择对应的3种梯度下降算法
+#           bathchSize = X.shape[0] ：就是批量梯度下降
+#           batchSize = 1 ：就是随机梯度下降
+#           1 &lt; batchSize &lt; X.shape[0] ： 就是小批量梯度下降
+def descent(data, theta, batchSize, stopType, thresh, alpha):
+    
+    init_time = time.time() # 用来计算梯度下降耗时
+    i = 0 # 迭代次数
+    k = 0 # batch
+    X, y = shuffleData(data) 
+    grad = np.zeros(theta.shape) # 计算的梯度（就是对各个theta[j]值的偏导数）
+    costs = [cost(X, y, theta)] # 计算代价函数(先把训练前的第一个存进来)
+    
+    while True:
+        grad = gradient(X[k:k+batchSize], y[k:k+batchSize], theta)
+        k += batchSize 
+        if k&gt;= n:
+            # 当跑满了循环次数后
+            k = 0
+            X, y = shuffleData(data) # 打乱数据
+        theta = theta - alpha*grad # 参数更新
+        costs.append(cost(X, y, theta)) # 计算新的代价函数
+        i += 1
+        
+        if stopType == STOP_ITER:
+            value = i
+        elif stopType == STOP_COST:
+            value = costs
+        elif stopType == STOP_GRAD:
+            value = grad
+        if stopCriterion(stopType, value, thresh):
+            break
+    return theta, i-1, costs, grad, time.time() - init_time
+</code></pre>
+
+<h1 id="测试方法">测试方法</h1>
+
+<pre><code class="language-python">def runExpe(data, theta, batchSize, stopType, thresh, alpha):
+    theta, iter, costs, grad, dur = descent(data, theta, batchSize, stopType, thresh, alpha)
+    #
+    name = &quot;Original&quot; if(data[:,1]&gt;2).sum() &gt; 1 else &quot;Scaled&quot;
+    #
+    name += &quot; data - learning rate:{} - &quot;.format(alpha)
+    #
+    if batchSize == n:
+        strDescType = &quot;Gradient&quot;
+    elif batchSize == 1:
+        strDescType = &quot;Stochastic&quot;
+    else:
+        strDescType = &quot;Mini-batch({})&quot;.format(batchSize)
+    name += strDescType + &quot; descent - Stop: &quot;
+    #
+    if stopType == STOP_ITER:
+        strStop = &quot;{} iterations&quot;.format(thresh)
+    elif stopType == STOP_COST:
+        strStop = &quot;costs change &lt; {}&quot;.format(thresh)
+    else:
+        strStop = &quot;gradient norm &lt; {}&quot;.format(thresh)
+        
+    name += strStop;
+    print(&quot;***{}\nTheta: {} - Iter: {} - Last Cost: {:03.2f} - Duration: {:03.2f}s&quot;.format(
+    name, theta, iter, costs[-1], dur))
+    
+    fig, ax = plt.subplots(figsize=(12,4))
+    ax.plot(np.arange(len(costs)), costs, 'r')
+    ax.set_xlabel('Iterations')
+    ax.set_ylabel('Cost')
+    ax.set_title(name.upper() + '- Error VS. Iteration')
+    return theta
+</code></pre>
+
+<pre><code class="language-python">n = X.shape[0]
+runExpe(orig_data, theta, n, STOP_ITER, thresh=5000, alpha=0.000001)
+</code></pre>
+
+<p><img src="https://lorwy.github.io/image/logistic_regression_test.png" alt="" /></p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Lorwy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2018-10-24</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="http://lorwy.github.io/tags/machine-learning/">Machine Learning</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/note/ios%E9%9D%A2%E8%AF%95%E4%B9%8B%E9%81%93_%E6%9E%B6%E6%9E%84%E7%AF%87_note/">
+            <span class="next-text nav-default">iOS面试之道_架构篇_Note</span>
+            <span class="prev-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:wslyfor@email.com" rel="me noopener" class="iconfont icon-email"
+        title="email">
+      </a>
+      <a href="https://github.com/Lorwy" rel="me noopener" class="iconfont icon-github"
+        title="github" target="_blank">
+      </a>
+  <a href="http://lorwy.github.io/index.xml" rel="noopener alternate" type="application/rss&#43;xml" class="iconfont icon-rss"
+    title="rss" target="_blank">
+  </a>
+  </div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span><span class="author">
+        lorwy
+        
+      </span></span>
+
+  
+  
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+  
+    <script type="text/javascript" src="/js/load-photoswipe.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
