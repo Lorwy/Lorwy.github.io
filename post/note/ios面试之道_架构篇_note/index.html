@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.49.2" />
+
+  <title>iOS面试之道_架构篇_Note &middot; Lorwy&#39;s blog</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdn.bootcss.com/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdn.bootcss.com/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="http://lorwy.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="http://lorwy.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="http://lorwy.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="//fonts.proxy.ustclug.org/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/KaTeX/0.9.0/katex.min.css">
+  <script src="//cdn.bootcss.com/KaTeX/0.9.0/katex.min.js"></script>
+  <script src="//cdn.bootcss.com/KaTeX/0.9.0/contrib/auto-render.min.js"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="http://lorwy.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="http://lorwy.github.io/">Blackburn</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lorwy.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lorwy.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lorwy.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="http://lorwy.github.io/about/">About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/Lorwy" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2017. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>iOS面试之道_架构篇_Note</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>23 Oct 2018, 00:00</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="http://lorwy.github.io/tags/interview">interview</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="http://lorwy.github.io/tags/ios">iOS</a>
+    
+  </div>
+  
+  
+
+</div>
+
+
+  
+
+<p>每个类、结构体、方法、变量的存在都应该遵循单一职责原则。</p>
+
+<h1 id="mvc架构的优缺点">MVC架构的优缺点</h1>
+
+<p>优点有2：</p>
+
+<ul>
+<li>代码总量少</li>
+<li>简单易懂</li>
+</ul>
+
+<p>缺点：（造成的原因主要因为<strong>视图层和控制器层高度耦合</strong>）</p>
+
+<ul>
+<li>代码过于集中（ViewController功能太过沉重）
+
+<ul>
+<li>交互</li>
+<li>视图更新</li>
+<li>布局</li>
+<li>Model数据获取及修改</li>
+<li>导航路由</li>
+</ul></li>
+<li>难以进行测试</li>
+<li>难以扩展（*ViewController太过笨重*）</li>
+<li>Model层过于简单</li>
+<li>网络层无从安放</li>
+</ul>
+
+<p><strong>总结</strong>: 过于笼统的代码分配，导致除了数据或者视图外的类、结构、方法等都将被放到ViewController中，造成ViewController过于臃肿，与view和无法解耦合</p>
+
+<h1 id="mvcs">MVCS</h1>
+
+<p>对MVC的一种优化，S即Store，就是数据处理的，可以是数据持久化相关的代码、数据筛选分类之类的等等，无处安放的网络请求代码也可以放到这里</p>
+
+<h1 id="viper架构简介">VIPER架构简介</h1>
+
+<p>VIPER架构由5部分组成：</p>
+
+<ul>
+<li>View</li>
+<li>Interactor</li>
+<li>Presenter</li>
+<li>Entity</li>
+<li>Router</li>
+</ul>
+
+<p>示意图：</p>
+
+<p><img src="https://lorwy.github.io/image/VIPER.jpeg" alt="" /></p>
+
+<h4 id="各模块说明">各模块说明</h4>
+
+<h5 id="视图层-view">视图层（View）</h5>
+
+<p>与MVP、MVVM一样，它包含与UI相关的一切操作，接受用户交互信息但不处理，而是传递给展示层</p>
+
+<h5 id="展示层-presenter">展示层（Presenter）</h5>
+
+<p>与MVP的Presenter或者MVVM的ViewModel功能类似。</p>
+
+<ul>
+<li>响应view传来的交互操作请求</li>
+<li>不对数据源修改，有修改需求的话就向Interactor发送请求</li>
+<li>链接路由层</li>
+</ul>
+
+<h5 id="路由层-router">路由层（Router）</h5>
+
+<p>负责界面跳转、组件切换</p>
+
+<h5 id="数据管理层-interactor">数据管理层（Interactor）</h5>
+
+<p>负责处理数据源信息</p>
+
+<ul>
+<li>网络请求</li>
+<li>数据传输</li>
+<li>缓存、存储</li>
+<li>生成实例等</li>
+<li>一些从中间层和模型层的一些逻辑差不多被剥离至此</li>
+</ul>
+
+<h5 id="模型层-entity">模型层（Entity）</h5>
+
+<p>很简单，只有下面两个东西</p>
+
+<ul>
+<li>初始化方法</li>
+<li>属性相关的get/set方法</li>
+</ul>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="http://lorwy.github.io/post/note/sunnyxx_ios_note/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="http://lorwy.github.io/post/note/sunnyxx_ios_note/">观 sunnyxx iOS 面试视频总结</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="http://lorwy.github.io/post/note/logistic_regression_with_gradient_descent/">运用梯度下降优化逻辑回归模型</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="http://lorwy.github.io/post/note/logistic_regression_with_gradient_descent/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="http://lorwy.github.io/js/Valine.min.js"></script>
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '',
+        appKey: '',
+        placeholder: '歪，在吗？',
+        notify: true,
+        visitor: true,
+    })
+</script>
+
+</div>
+
+</div>
+</div>
+<script src="http://lorwy.github.io/js/ui.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'Your Google Analytics tracking ID', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+<script>renderMathInElement(document.body);</script>
+</body>
+</html>
+

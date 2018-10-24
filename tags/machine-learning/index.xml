@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Lorwy&#39;s blog</title>
+    <link>http://lorwy.github.io/tags/machine-learning/</link>
+    <description>Recent content in Machine Learning on Lorwy&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 24 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://lorwy.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>运用梯度下降优化逻辑回归模型</title>
+      <link>http://lorwy.github.io/post/note/logistic_regression_with_gradient_descent/</link>
+      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://lorwy.github.io/post/note/logistic_regression_with_gradient_descent/</guid>
+      <description>逻辑回归简介 逻辑回归并不属于回归算法，而是经典的二分类算法，也可以处理多分类问题。
+机器学习算法选择：先逻辑回归再用复杂的，能简单就用简单的
+拿到一个分类问题，首选逻辑回归试试，看看效果如何，再用复杂的分类算法试试，看看是否有逻辑回归效果更好
+注：逻辑回归的决策边界：可以使非线性的
+具体算法 目标：建立分类器来求出 $\theta$
+算法步骤：
+ 实现 sigmoid(z) 函数 实现 h(x) 函数 从数据中提取出特征 X 和标签 y 实现 cost function 实现偏导数 gradient() 进行参数更新 descent 最后就求出了 $\theta$  sigmoid函数 \[g(z) = \frac{1}{1+e^{-z}}\]
+
+函数定义:
+def sigmoid(z): return 1 / (1 + np.exp(-z))  h(x) \[h(x) = \theta^T X\]
+def hx(X, theta): return sigmoid(np.dot(X, theta.T))  如： \( \begin{array}{ccc} \begin{pmatrix}\theta_{0} &amp; \theta_{1} &amp; \theta_{2}\end{pmatrix} &amp; \times &amp; \begin{pmatrix}1\\ x_{1}\\ x_{2} \end{pmatrix}\end{array}=\theta_{0}+\theta_{1}x_{1}+\theta_{2}x_{2} \)</description>
+    </item>
+    
+  </channel>
+</rss>
