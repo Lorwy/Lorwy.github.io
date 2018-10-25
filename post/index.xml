@@ -25,7 +25,8 @@
 · AVFoundation 提供 Objective-C 对象可以用来回放并录制音频及视频
 · CoreData 数据持久化的一个框架，提供 Objective-C 接口可以将对象放入数据库
 · CoreText 提供 C 语言接口，可以高效执行文字排版及渲染操作
-· QuartzCore · CoreGraphics 48.多用块枚举，少用 for 循环 </description>
+· QuartzCore · CoreGraphics 48.多用块枚举，少用 for 循环 四种遍历方式：
+ for 循环 Objective-C 1.0 时代的 NSEnumerator 快速遍历 基于枚举块的遍历  要点： </description>
     </item>
     
     <item>
