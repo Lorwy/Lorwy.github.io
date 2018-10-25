@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.49.2" />
 
-  <title>Posts &middot; Lorwy&#39;s blog</title>
+  <title> &middot; Lorwy&#39;s blog</title>
 
   
   
@@ -41,8 +41,6 @@
   <script src="//cdn.bootcss.com/KaTeX/0.9.0/contrib/auto-render.min.js"></script>
 
  
-  
-  <link rel="alternate" type="application/rss+xml" title="Lorwy&#39;s blog" href="https://lorwy.github.io/post/index.xml" />
   
 
   
@@ -113,10 +111,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://lorwy.github.io/post/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -216,32 +210,99 @@
 
 
 <div class="header">
-  <h1>Posts</h1>
+  <h1></h1>
+  <h2></h2>
 </div>
 <div class="content">
-  
-  <h2>2018</h2>
-  <ul>
-  
-    <li><time>24 Oct 2018, 00:00</time> - <a href="https://lorwy.github.io/post/note/logistic_regression_with_gradient_descent/">运用梯度下降优化逻辑回归模型</a></li>
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>01 Jan 0001, 00:00</time>
+  </div>
 
   
-    <li><time>23 Oct 2018, 00:00</time> - <a href="https://lorwy.github.io/post/note/sunnyxx_ios_note/">观 sunnyxx iOS 面试视频总结</a></li>
 
   
-    <li><time>23 Oct 2018, 00:00</time> - <a href="https://lorwy.github.io/post/note/ios%E9%9D%A2%E8%AF%95%E4%B9%8B%E9%81%93_%E6%9E%B6%E6%9E%84%E7%AF%87_note/">iOS面试之道_架构篇_Note</a></li>
 
   
-  </ul>
-  
-  <h2>0001</h2>
-  <ul>
-  
-    <li><time>01 Jan 0001, 00:00</time> - <a href="https://lorwy.github.io/post/note/effectiveoc/system_framework/"></a></li>
+
+</div>
+
 
   
-  </ul>
+
+<h1 id="47-熟悉系统框架">47.熟悉系统框架</h1>
+
+<p>##· Foundation
+NSObject 、 NSArray 、 NSDictionary 等都属于其中，是最主要的框架
+NSLinguisticTagger 可以解析字符串并找到其中的全部名词、动词、代词等</p>
+
+<p>##· CoreFoundation
+CoreFoundation 不是 Objective-C 的框架</p>
+
+<p>##· CFNetwork
+C 语言级别的网络通信能力，是将“BSD套接字”（BSD socket）抽象成易于使用的网络接口，Foundation 框架再封装的 CFNetwork 为 Objective-C 语言的接口
+##· CoreAudio
+提供 C 语言 API 可用来操作设备上的音频硬件。 这套 API 可以抽象出另外一套 Objective-C 式 API，用来处理音频问题更简单</p>
+
+<p>##· AVFoundation
+提供 Objective-C 对象可以用来回放并录制音频及视频
+##· CoreData
+数据持久化的一个框架，提供 Objective-C 接口可以将对象放入数据库</p>
+
+<p>##· CoreText
+提供 C 语言接口，可以高效执行文字排版及渲染操作</p>
+
+<p>##· QuartzCore</p>
+
+<p>##· CoreGraphics</p>
+
+<h1 id="48-多用块枚举-少用-for-循环">48.多用块枚举，少用 for 循环</h1>
+
+
   
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://lorwy.github.io/post/note/sunnyxx_ios_note/">观 sunnyxx iOS 面试视频总结</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://lorwy.github.io/post/note/sunnyxx_ios_note/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://lorwy.github.io/js/Valine.min.js"></script>
+<div id="vcomments"></div>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '',
+        appKey: '',
+        placeholder: '歪，在吗？',
+        notify: true,
+        visitor: true,
+    })
+</script>
+
 </div>
 
 </div>
